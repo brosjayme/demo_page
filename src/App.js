@@ -1,18 +1,20 @@
 import React from "react";
+import Form from "./Form";
 function App() {
-  function handleClick(e) {
-    e.preventDefault();
+  function handleClick() {
     console.log("button clicked");
   }
-  return (
-    <div className="App">
-      <button onClick={handleClick}>do something</button>
+  function handleSubmit(e) {
+    console.log("Form submitted");
+  }
 
-      <form onSubmit={handleClick}>
-        <input type="text" />
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+  return (
+    <>
+      <div className="App">
+        <button onClick={handleClick}>do something</button>
+        <Form onSubmit={handleSubmit} />
+      </div>
+    </>
   );
 }
 
