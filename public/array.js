@@ -3,9 +3,21 @@ const double = [];
 const newArray = array.forEach((num) => {
   double.push = num * 2;
 });
-console.log(newArray, double);
+
+console.log(double);
 // map,filter, reduce
 const mapArray = array.map((num) => {
   return num * 2;
 });
 console.log("map", mapArray);
+// filter array
+const filterArray = array.filter((num) => {
+  return num > 5;
+});
+console.log(filterArray);
+
+// reduce
+const reduceArray = array.reduce((accumulator, num) => {
+  return accumulator + num;
+}, 5);
+console.log("reduce", reduceArray);
